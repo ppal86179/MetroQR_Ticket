@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="lastFinalscript.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+                /* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+  font-family: 'Poppins', sans-serif;
+}
+.body{
+    display: flex;
+    padding: 0 10px;
+    min-height: 70vh;
+    align-items: center;
+    /* background: white; */
+    justify-content: center;
+}
+.wrapper{
+  height: 357px;
+    max-width: 410px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 25px 0;
+    transition: height 0.2s ease;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 29%);
+    margin-top: 17px;
+}
+.wrapper.active{
+  height: 583px;
+}
+.flex.active{
+    height: 636px;
+}
+header h1{
+  font-size: 21px;
+  font-weight: 500;
+}
+header p{
+    margin-top: 9px;
+    color: #575757;
+    font-size: 16px;
+    text-align: center;
+}
+.wrapper .form{
+  margin: 20px 0 25px;
+}
+.form :where(input, button){
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.1s ease;
+}
+.form input{
+    font-size: 18px;
+    padding: 0 3px;
+    border: 2px solid #999;
+    margin: -8px -5px -10px 10px;
+    height: 38px;
+    width: 401px;
+}
+.form input:focus{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.form input::placeholder{
+  color: #999;
+}
+.form button{
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  background: #3498DB;
+  margin-left:10px;
+  box-shadow: 0 6px 16px rgb(52 105 203 / 80%);;
+}
+.qr-code{
+  opacity: 0;
+  display: flex;
+  padding: 33px 0;
+  border-radius: 5px;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+.wrapper.active .qr-code{
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.qr-code img{
+  width: 170px;
+}
+
+@media (max-width: 430px){
+  .wrapper{
+    height: 255px;
+    padding: 16px 20px;
+  }
+  .wrapper.active{
+    height: 510px;
+  }
+  .flex.active{
+    height: 610px;
+}
+  header p{
+    color: #696969;
+  }
+  .form :where(input, button){
+    height: 52px;
+  }
+  .qr-code img{
+    width: 160px;
+  }  
+}
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <div class="item" id="nav1">
+
+          <div class="main">
+            <div class="navbar" id="upper">
+                <div class="store">
+                    <div class="follow" id="left">
+                        <h5>FOLLOW US ON :</h5>
+                        <a href="#"><img src="img/facebook.png" alt=""></a>
+                        <a href="#"><img src="img/twitter.png" alt=""></a>
+                        <a href="#"><img src="img/insta.png" alt=""></a>
+                        <a href="#"><img src="img/snapchat.png" alt=""></a>
+                    </div>
+                    <div class="extra" id="right">
+                        <div class="lang" id="langua1"><a href="#">हिन्दी</a></div>
+                        <div class="lang" id="langua2"><a href="#">ENGLISH</a></div>
+                        <div class="lang" id="langua3"><a href="#">FOR PASSENGERS</a></div>
+                        <div class="lang" id="langua4"><a href="#">FOR CORPORATE</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar" id="lower">
+              <div class="two" id="fir">
+                  <img src="img/nmrc_logo.png" alt="">
+              </div>
+                <div class="two" id="sec">
+                    <div class="more" >
+                        <input type="search" placeholder="Search" 
+                        style="height: 48px;margin-left: 367px;padding: 9px;border-radius: 8px;box-shadow: 0 6px 16px rgb(52 105 203 / 44%);">
+                        <button id="bt">SEARCH</button>
+                    </div>
+                    <div class="more" style="display: flex; margin-top: 5px; width: 100%;">
+                        <div class="seven"><a href="#" >HOME</a></div>
+                        <div class="seven"><a href="#">RECHARGE</a></div>
+                        <div class="seven"><a href="#">FACILITIES</a></div>
+                        <div class="seven"><a href="#">NETWORK</a></div>
+                        <div class="seven"><a href="#">SECURITY</a></div>
+                        <div class="seven"><a href="#">HELP</a></div>
+                        <div class="seven"><a href="#">FAQ's</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        
+
+        <div class="item" id="middle1">
+            <div class="flex" id="first">
+                <div class="body">
+                    <div class="wrapper">
+                      <header>
+                        <h1 style="margin: -12px">PLAN YOUR JOURNEY</h1>
+                        <p>Click here to plan through <a href="#">Interactive Map</a></p>
+                      </header>
+                      <h4 style="margin: -13px">FROM</h4>
+                    <select class="select">
+                        <option value="xyz">--Select Starting point--</option>
+                        <option value="xyz">jahangir puri</option>
+                        <option value="xyz">Adarsh Nagar</option>
+                        <option value="xyz">Azadpur</option>
+                        <option value="xyz">Model Town</option>
+                        <option value="xyz">GTB Nagar</option>
+                        <option value="xyz">Vishvidyalya</option>
+                        <option value="xyz">Vidhan Sabha</option>
+                        <option value="xyz">Civil line</option>
+                        <option value="xyz">Kashmiri Gate</option>
+                        <option value="xyz">Chawri Bazar</option>
+                        <option value="xyz">Chandni chowk</option>
+                        <option value="xyz">New Delhi</option>
+                        <option value="xyz">Rajiv chowk</option>
+                        <option value="xyz">Hauz khas</option>
+                        <option value="xyz">Malviya nagar</option>
+                        <option value="xyz">saket</option>
+                        <option value="xyz">Green Park</option>
+                        <option value="xyz">Delhi haat</option>
+                        <option value="xyz">INA</option>
+                        <option value="xyz">Qutub Minar</option>
+                        <option value="xyz">patel chowk</option>
+                        <option value="xyz">udyog bhavan</option>
+                        <option value="xyz">Chhatarpur</option>
+                        <option value="xyz">M.G road</option>
+                        <option value="xyz">Huda City Center</option>
+                    </select>
+            
+                    <h4 style="margin : -13px">TO</h4>
+                                <select class="select">
+                                    <option value="xyz">--Select Destination point--</option>
+                                    <option value="xyz">jahangir puri</option>
+                                    <option value="xyz">Adarsh Nagar</option>
+                                    <option value="xyz">Azadpur</option>
+                                    <option value="xyz">Model Town</option>
+                                    <option value="xyz">GTB Nagar</option>
+                                    <option value="xyz">Vishvidyalya</option>
+                                    <option value="xyz">Vidhan Sabha</option>
+                                    <option value="xyz">Civil line</option>
+                                    <option value="xyz">Kashmiri Gate</option>
+                                    <option value="xyz">Chawri Bazar</option>
+                                    <option value="xyz">Chandni chowk</option>
+                                    <option value="xyz">New Delhi</option>
+                                    <option value="xyz">Rajiv chowk</option>
+                                    <option value="xyz">Hauz khas</option>
+                                    <option value="xyz">Malviya nagar</option>
+                                    <option value="xyz">saket</option>
+                                    <option value="xyz">Green Park</option>
+                                    <option value="xyz">Delhi haat</option>
+                                    <option value="xyz">INA</option>
+                                    <option value="xyz">Qutub Minar</option>
+                                    <option value="xyz">patel chowk</option>
+                                    <option value="xyz">udyog bhavan</option>
+                                    <option value="xyz">Chhatarpur</option>
+                                    <option value="xyz">M.G road</option>
+                                    <option value="xyz">Huda City Center</option>
+                                </select>
+                                <h4 style="margin:-9px">ENTER YOUR NAME</h4>
+                      <div class="form">
+                        <input type="text" spellcheck="false" placeholder="PLEASE ENTER YOUR NAME">
+                        <button>Generate QR Code</button>
+                      </div>
+                      <div class="qr-code">
+                        <img src="" alt="qr-code">
+                      </div>
+                    </div> 
+                </div>
+            </div>
+
+                     <!-- CENTER -->
+                    <div class="flex" id="center">
+
+                        <div class="centerone">
+                          <div class="counter"><ul><li><div class="counter-count">391</div><p>Total Network Length (km) <em>*</em></p></li><li><div class="counter-count">12</div><p>Total no of Lines<em>*</em></p></li><li><div class="counter-count">286</div><p>Total no of Stations <em>*</em></p></li></ul><p class="small  my-2 ps-2"><em>*</em> Including NOIDA-Greater NOIDA Aqua Line, Rapid Metro Gurugram.</p></div>
+                        </div>
+
+                        <div class="centertwo">
+                          <div class="map">
+                            <h4>plan your journey with map</h4>
+                            <a href="#"><img src="img/map.jpg" alt=""></a>
+                          </div>
+                        </div>
+      
+                    </div>
+
+
+                     <!-- MIDDLE-THIRD-BOX -->
+            <div class="flex" id="second">
+              <ul class="content1">
+                <div class="content contentItem1 " style="border-color:#ffb7ed">
+                    <a href="#"><img src="img/tag.png" alt=""><a href="#">FARE PRICES</a></a>
+                </div>
+                <div class="content contentItem2" style="border-color: #7ce2e1">
+                    <img src="img/ticket.png" alt=""><a href="#">TICKETS</a>
+                </div>
+            </ul>
+            <ul class="content1">
+                <div class="content contentItem3" style="border-color: #c4b7ff">
+                    <img src="img/tour.png" alt=""><a href="#">TOUR GUIDE</a>
+                </div>
+                <div class="content contentItem4" style="border-color: #f9b182">
+                    <img src="img/museum.png" alt=""><a href="#">METRO MUSEUM</a>
+                </div>
+            </ul>
+            <ul class="content1">
+                <div class="content contentItem5" style="border-color: #9cf59d">
+                    <img src="img/bag.png" alt=""><a href="#">LOST & FOUND</a>
+                </div>
+                <div class="content contentItem6" style="border-color: #75adff">
+                    <img src="img/advisor.png" alt=""><a href="#">ADVISOR</a>
+                </div>
+            </ul>
+            <ul class="content1">
+                <div class="content contentItem7" id="extra" style="border-color: #ffb100">
+                    <img src="img/clock.png" alt=""><a href="#">FIRST/LAST TRAIN TIME</a>
+                </div>
+            </ul>
+            </div>
+        </div>
+
+        <div class="rechargebox">
+          <div class="firstrecharge" id="card">
+            <div id="ticketphoto"><img src="img/card.png" alt=""></div>
+              <div class="ticketrecharge" id="tr"><h4 style="margin-top: -35px;
+                margin-bottom: -6px;
+                font-size: 29px;">RECHARGE YOUR CARD</h4>
+                <h4 style="margin: -6px;margin-top: 5px;font-weight: 500;">Card ID</h4>
+                <input type="text" placeholder="ENTER 11-DIGITS CARD NUMBER" style="text-align:center">
+                <h4 style="margin: -6px;margin-top: 5px;font-weight: 500;">Recharge Amount</h4>
+                <input type="text" placeholder="ENTER THE AMOUNT" style="text-align:center">
+                <button>RECHARGE</button>
+              </div>
+            </div>
+          <div class="firstrecharge" id="yoursearch">
+            <div class="storing">
+                <div class="headpara">
+                  <div class="searchimage"><img src="img/search.png" alt="">
+                  <p>Know about your station</p></div>
+                <div class="searchinghere">
+                  <input type="text" placeholder="Search your station">
+                </div>
+                <div class="advancebutton"><button>Advance Search</button></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="item" id="footer" >
+            <div class="footcontainer"style="display: flex;">
+
+              <div class="footerfirst" id="ajust">
+                <div id="resize">
+                  <img src="img/nmrc_logo.png" alt="">
+                </div>
+              </div>
+
+              <div class="footerfirst" >
+                <h4>About us</h4>
+                  <p>Noida Metro Rail Corporation Limited(NMRC) is a company incorporated under the provisions of the Companies Act 2013, having its registered office at Block-III, 3rd Floor, Ganga Shopping Complex, Sector-29 Noida 201301.
+                  NMRC is a Joint Venture Company of Government of India (GoI) and Government of Uttar Pradesh (GoUP) established for the purpose of planning, building and establishing of Mass transit and other urban transport and people mover systems of all types and disciplines.</p>
+              </div>
+
+              <div class="footerfirst">
+                <h4>Quick Links</h4>
+                <div class="quicklink">
+                  <ul>
+                    <a href="#"><li>press release</li>
+                    <li>project</li>
+                    <li>contact us</li>
+                    <li>Tender</li>
+                    <li>Lost & Found</li>
+                    <li>Term & Conditions</li>
+                    <li>Sitemap</li></a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
