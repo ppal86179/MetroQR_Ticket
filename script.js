@@ -14,7 +14,7 @@ generateBtn.addEventListener("click", () => {
     qrImg.addEventListener("load", () => {
         wrapper.classList.add("active");
         flex.classList.add("active");
-        generateBtn.innerText = "Pay Ticket Fare To Generate QR Code";
+        generateBtn.innerText = "QR Code Generated Successfully";
     });
 });
 
