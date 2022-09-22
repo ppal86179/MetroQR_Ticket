@@ -22,6 +22,7 @@ qrInput.addEventListener("keyup", () => {
     if(!qrInput.value.trim()) {
         wrapper.classList.remove("active");
         flex.classList.remove("active");
+        generateBtn.innerText = "Pay ticket Fare To Generate QR Code";
         preValue = "";
     }
 });
